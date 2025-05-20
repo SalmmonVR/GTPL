@@ -20,7 +20,6 @@
       background-size: 400% 400%;
       animation: gradientMove 10s ease infinite;
       color: #fff;
-      cursor: url('https://cur.cursors-4u.net/games/gam-13/gam1233.cur'), auto;
     }
 
     @keyframes gradientMove {
@@ -64,6 +63,7 @@
       align-items: center;
       padding: 1rem 2rem;
       background: rgba(0, 0, 0, 0.8);
+      flex-wrap: wrap;
     }
 
     nav h1 {
@@ -91,7 +91,7 @@
     .nav-links {
       display: flex;
       gap: 1.5rem;
-      position: relative;
+      align-items: center;
     }
 
     .nav-links a {
@@ -113,7 +113,7 @@
     .dropdown {
       display: none;
       position: absolute;
-      top: 40px;
+      top: 100%;
       right: 0;
       background-color: #222;
       border-radius: 8px;
@@ -126,7 +126,7 @@
       margin: 0.25rem 0;
     }
 
-    .nav-links .about:hover .dropdown {
+    .about:hover .dropdown {
       display: flex;
     }
 
@@ -144,6 +144,7 @@
         right: 20px;
         padding: 1rem;
         border-radius: 10px;
+        z-index: 1000;
       }
 
       .nav-links.active {
@@ -202,8 +203,8 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <div class="nav-links" id="navLinks">
       <a href="https://example.com" target="_blank">Bracket</a>
-      <div class="about">
-        <a href="#">About Us</a>
+      <div class="about" style="position: relative;">
+        <a href="#">About Us ▾</a>
         <div class="dropdown">
           <a href="https://discord.gg/qUDtKpVasK" target="_blank">Discord</a>
         </div>
