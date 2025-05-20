@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PFA - Pro For All</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader"></div>
+    <p>Loading PFA...</p>
+  </div>
+
+  <!-- Top Banner -->
+  <div class="banner-bar"></div>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="pfa-logo.png" alt="PFA Logo" class="logo" />
+      <span class="logo-text">PFA</span>
+    </a>
+
+    <nav>
+      <a href="https://your-bracket-link.com" target="_blank">Bracket</a>
+      <div class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <div class="dropdown-content">
+          <a href="https://discord.gg/yourdiscord" target="_blank">Discord</a>
+          <a href="https://tiktok.com/@yourtiktok" target="_blank">TikTok</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Background Video -->
+  <main>
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="pfa-video" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay-text">
+      <h1><span class="glow">PRO FOR ALL</span></h1>
+      <p class="quote">"Only For The Best"</p>
+    </div>
+  </main>
+
+  <!-- JavaScript: Delay to show loading -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+      }, 4000); // wait 0.8s to show loading effect
+    });
+  </script>
+</body>
+</html>
